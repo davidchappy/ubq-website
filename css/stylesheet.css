@@ -49,7 +49,7 @@ header {
 #main-nav {
 	width: 100%;
 	position: absolute; top:0%;
-	background: rgba(250,250,250,.8);
+	background: rgba(100,100,100,.5); 
 	height: 100px;
 }
 
@@ -80,43 +80,6 @@ body.home a.home, body.about a.about, body.events a.events, body.contact a.conta
 }
 
 
-
-/* Unused Nav 
-
-#main-nav ul { 
-	display:none;
-}
-
-
-#nav-drop-menu {
-	height: 40px; width: 50px;
-	background: none;
-	position: fixed; top:34px; right: 34px;
-}
-
-#nav-drop-menu ul {
-	margin: 0 !important; padding: 0 !important;
-	text-align: center;
-	font-size: .4em;
-	line-height: 12px;
-}
-
-#nav-drop-menu li {
-	height: 3px; width: 30px;
-	background-color: #000;
-	display: inline-block;
-	margin: 0;
-}
-
-#nav-drop-menu p {
-	color: #000;
-	font-size: .8em;
-	font-weight: bold;
-	text-align: center;
-}
-
-*/
-
 /* Logo */
 
 #main-nav a.logo { 
@@ -124,7 +87,7 @@ body.home a.home, body.about a.about, body.events a.events, body.contact a.conta
 	float: left;
 	background: url("../images/logo3.png") no-repeat center top;
 	background-size: contain;
-	width: 120px; height: 80px;
+	width: 145px; height: 100px;
 	margin-left: 50px; margin-top: 10px;
 }
 
@@ -244,7 +207,9 @@ header.home {
 
 #intro-header {
 	text-align: right;
-	background: rgba(185,153,47,.50) url(../images/brass-instruments-edited.jpg) no-repeat; background-size:cover;
+	background: -moz-linear-gradient(to right, #B9992F, transparent), -webkit-linear-gradient(to right, #B9992F, transparent), -ms-linear-gradient(to right, #B9992F, transparent), linear-gradient(to right, #B9992F, transparent),
+				#B9992F url(../images/brass-instruments.jpg) no-repeat center;
+	background-size:cover;
 	height: 300px;
 	color: #fff;
 	font-weight: 700;
