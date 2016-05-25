@@ -30,8 +30,19 @@ body {
 	font-size: 1.2rem;
 }
 
+
 /* carousel */
 
+.carousel-item img {
+	margin: 0 auto;
+}
+
+.carousel-control {
+	background-image: none !important;
+}
+
+
+}
 
 /* intro */
 
@@ -47,23 +58,26 @@ body {
 /* footer */
 
 footer {
-	height: 60px;
+	height: 80px;
 	background-color: rgba(10,10,10,.9);
 	position: relative;
+	border-top: 1px solid #ddd;
+	margin-top: 3em;
 }
 
-footer p.copyright { line-height: 4.3; color: #fff; font-size: 1rem; margin:0 !important;}
+footer p.copyright { line-height: 4.3; color: #fff; font-size: 1rem; margin: 0 0 0 4% !important;}
 
 #footer-nav { 
 	position: absolute; bottom:0%;
 	width: 100%;
-	height: 60px;
+	height: 80px;
+	line-height: 3.5;
 }
 
 #footer-nav ul {
 	text-align: center;
 	margin: 0 auto;
-	height: 60px;
+	height: 80px;
 	width: 400px;
 	padding: 19px 0 19px 0;
 }
@@ -72,69 +86,65 @@ footer p.copyright { line-height: 4.3; color: #fff; font-size: 1rem; margin:0 !i
 	display: inline-block;
 }
 
-#footer-nav a:hover {
-	color: #fff;
-}
-
-#footer-nav ul::after { 
+#footer::after { 
 	content:'';
-	height:0px; width: 0px;
+	display: table;
 	clear: both;
-}
-
-#footer-nav ul li:last-child {
-	border-right: none !important;
 }
 
 #footer-nav li a { color:#B9992F; padding: 0 15px; display:inline-block; font-size: 1rem; }
 
-footer {
-	border-top: 1px solid #ddd;
-}
-
-footer #fb-link {
-	position: absolute; right: 3%; bottom:20%;
+#fb-link img {
+	position: absolute; right: 4%; bottom:20%;
 	display: inline-block;
 	height: 35px; width: 35px;
-	background: url(../images/icon-facebook.png);
-	background-size: cover;
+	z-index: 2;
 }
 
-footer #fb-link:hover {
-	background: url(../images/icon-facebook-red.png);
-	position: absolute; right: 3%; bottom:20%;
-	display: inline-block;
-	height: 35px; width: 35px;
-	background-size: cover;
+.icon-overlay {
+	opacity: 0;
 }
 
-footer #fb-link p { 
-	display: none;
+#fb-link:hover .icon-overlay {
+	opacity: 1;
+	z-index: 3;
 }
-
-
 
 
 /* responsive styles */
 
-@media screen and (max-width:544px) {
+@media screen and (max-width: 544px) {
 	#footer-nav {
 		display:none;
 	}
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
 	.nav-link {
 		font-size: 1rem;
 	}
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
 	#footer-nav ul {
 		width: 400px;
 	}
 	footer p, #footer-nav a {
 		font-size: .9rem !important;
 		line-height: 2;
+	}
+}
+
+@media all and (min-width: 1400px) {
+	.left.carousel-control,
+	.right.carousel-control {
+		width: 20%;
+	}
+	.icon-next,
+	.icon-prev {
+		font-size: 3em !important;
+	}
+	.icon-next {
+
 	}
 }
